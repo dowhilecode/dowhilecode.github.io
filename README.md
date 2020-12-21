@@ -1,4 +1,4 @@
 # About Me
-to get familiar with git
+My Portfolio
 
-Hi! I am Manish and this is my first git branch from master.
+Hi! I am Manish Kumar, full stack software developer.
