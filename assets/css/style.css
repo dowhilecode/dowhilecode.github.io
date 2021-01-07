@@ -234,6 +234,11 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
 }
 
+#hero h5{
+  margin: -10 0 10px 4px;
+  color: #fff;
+}
+
 #hero p {
   color: #fff;
   margin-bottom: 50px;
