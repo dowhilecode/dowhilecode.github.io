@@ -8,21 +8,9 @@
     new Typed('.typed', {
       strings: typed_strings,
       loop: true,
-      typeSpeed: 40,
+      typeSpeed: 30,
       backSpeed: 30,
-      backDelay: 1000
-    });
-  }
-
-  if ($('.typed2').length) {
-    var typed_strings = $(".typed2").data('typed-items');
-    typed_strings = typed_strings.split(',')
-    new Typed('.typed2', {
-      strings: typed_strings,
-      loop: true,
-      typeSpeed: 100,
-      backSpeed: 30,
-      backDelay: 800
+      backDelay: 1500
     });
   }
 
