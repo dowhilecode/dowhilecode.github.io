@@ -1,265 +1,377 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Manish Kumar - Software Architect & Full Stack Developer</title>
+    <meta
+      content="Experienced Software Architect and Full Stack Developer specializing in .NET, Azure, and modern web technologies"
+      name="description">
+    <meta content="software architect, full stack developer, .NET, Azure, C#, JavaScript, React, Angular"
+      name="keywords">
 
-  <title>Manish Kumar</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=DM+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet">
 
-  <!-- Google Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-    rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
-  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <!-- TypewriterJS -->
+    <script src="https://unpkg.com/typewriter-effect@2.18.2/dist/core.js"></script>
 
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+    <!-- Modern CSS -->
+    <link href="assets/css/modern-style.css" rel="stylesheet">
 
-</head>
-<body>
-  <!-- ======= Mobile nav toggle button ======= -->
-  <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
-  <!-- ======= Header ======= -->
-  <header id="header">
-    <div class="d-flex flex-column">
-      <div class="profile">
-        <img src="assets/img/Me.jpg" alt="" class="img-fluid rounded-circle">
-        <h1 class="text-light"><a href="index.html">Manish Kumar</a></h1>
-        <div class="social-links mt-3 text-center">
-          <a href="https://www.linkedin.com/in/manish-kumar-7b962028" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-          <a href="https://github.com/dowhilecode" target="_blank" class="github"><i class="bx bxl-github"></i></a>
-          <a href="https://stackoverflow.com/users/1403149/manish-kumar" target="_blank" class="stackoverflow"><i class="bx bxl-stack-overflow"></i></a>
-          <a href="https://www.hackerrank.com/manish0904?hr_r=1" target="_blank" class="facebook"><i class="bx bx1-facebook"></i>H</a>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="nav-container">
+        <a href="#" class="logo">MK</a>
+        <nav class="nav-links">
+          <a href="#home" class="nav-link">Home</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#services" class="nav-link">Services</a>
+          <a href="#youtube" class="nav-link">YouTube</a>
+        </nav>
+        <button class="theme-toggle" aria-label="Toggle theme">
+          <i class="fas fa-moon"></i>
+        </button>
+        <!-- <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+          <i class="fas fa-bars"></i>
+        </button> -->
+      </div>
+    </header>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-grid">
+        <!-- Left Side: Profile Info -->
+        <div class="hero-content animate-on-scroll">
+          <img src="assets/img/Me.jpg" alt="Manish Kumar" class="profile-img">
+          <h1 class="hero-title">Manish Kumar</h1>
+          <p class="hero-subtitle">Transforming Ideas into Digital Reality</p>
+          <div id="typed-text" class="typed-text"></div>
+        </div> <!-- Right Side: Featured Content -->
+        <div class="featured-content animate-on-scroll">
+          <div class="featured-grid">
+            <div class="featured-card linkedin-featured">
+              <!-- onclick="window.open('https://www.linkedin.com/in/manish-kumar-7b962028', '_blank')" -->
+              <div class="featured-stats">
+                <div class="featured-stat">
+                  <span class="stat-number">13+</span>
+                  <span class="stat-label">Years Experience</span>
+                </div>
+              </div>
+              <div class="card-header">
+                <div class="profile-links">
+                  <a href="assets/files/Manish-Kumar-Resume.pdf" download target="_blank" class="profile-link">
+                    <i class="fas fa-download"></i>
+                    <span class="link-label">Resume</span>
+                  </a>
+                  <a href="https://www.linkedin.com/in/manish-kumar-7b962028" target="_blank" rel="noopener"
+                    class="profile-link">
+                    <i class="fab fa-linkedin-in"></i>
+                    <span class="link-label">Profile</span>
+                  </a>
+                  <a href="https://github.com/dowhilecode" target="_blank" rel="noopener" class="profile-link">
+                    <i class="fab fa-github"></i>
+                    <span class="link-label">GitHub</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="featured-card youtube-featured"
+              onclick="window.open('https://www.youtube.com/channel/UCDb40BtvqBPinXo5S8mi-hQ', '_blank')">              <div class="card-header youtube-header">
+                <div class="logo-container">
+                  <img src="assets/img/yt-channel-logo-dowhilecode.png" alt="DoWhileCode Logo" class="yt-logo">
+                </div>
+                <div class="youtube-info">
+                  <div class="featured-icon">
+                    <i class="fab fa-youtube"></i>
+                  </div>
+                  <span class="channel-title">DoWhileCode</span>
+                </div>
+              </div>
+            </div><!-- Adding Core Skills Section -->
+            <div class="featured-card skills-featured">
+              <!-- <div class="skills-header">
+                <div class="skills-title">
+                  <div class="featured-icon">
+                    <i class="fas fa-code"></i>
+                  </div>
+                  <h3 class="skills-heading">Core Skills</h3>
+                </div>
+              </div> -->
+              <div class="skills-grid-container">
+                <div class="skills-column">
+                  <h4 class="skills-category-title">Frontend</h4>
+                  <div class="skill-item">
+                    <i class="fab fa-angular"></i>
+                    <span>Angular</span>
+                  </div>
+                  <div class="skill-item">
+                    <i class="fab fa-react"></i>
+                    <span>React</span>
+                  </div>
+                  <div class="skill-item">
+                    <i class="fab fa-js"></i>
+                    <span>JavaScript</span>
+                  </div>
+                  <div class="skill-item">
+                    <i class="fab fa-html5"></i>
+                    <span>TypeScript</span>
+                  </div>
+                </div>
+                <div class="skills-column">
+                  <h4 class="skills-category-title">Backend</h4>
+                  <div class="skill-item">
+                    <i class="fab fa-microsoft"></i>
+                    <span>.NET Core</span>
+                  </div>
+                  <div class="skill-item">
+                    <i class="fas fa-code"></i>
+                    <span>Web APIs</span>
+                  </div>
+                  <div class="skill-item">
+                    <i class="fas fa-database"></i>
+                    <span>SQL Server</span>
+                  </div>
+                </div>
+                <div class="skills-column">
+                  <h4 class="skills-category-title">Cloud & DevOps</h4>
+                  <div class="skill-item">
+                    <i class="fab fa-azure"></i>
+                    <span>Azure</span>
+                  </div>
+                  <div class="skill-item">
+                    <i class="fab fa-github"></i>
+                    <span>Azure DevOps</span>
+                  </div>
+                  <div class="skill-item">
+                    <i class="fab fa-docker"></i>
+                    <span>Docker</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <nav class="nav-menu">
-        <ul>
-          <li class="active"><a href="#hero"><i class="bx bx-home"></i> <span>Home</span></a></li>
-          <li><a href="#about"><i class="bx bx-user"></i> <span>About</span></a></li>
-          <li><a href="#skills"><i class="bx bx-user"></i> <span>Skills</span></a></li>
-        </ul>
-      </nav><!-- .nav-menu -->
-      <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
-
-    </div>
-  </header><!-- End Header -->
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
-    <div class="hero-container" data-aos="fade-in">
-      <h1>Manish Kumar</h1>
-      <h5>love to turn good ideas into reality with technology</h5>
-      <p>
-        {<span class="typed" data-typed-items="loves programming,C# DotNet Core,Fullstack,ReactJS,NextJS,Angular,problem solver,JavaScript,Azure,AZ DevOps,Docker,Microservices"></span>}
-      </p>
-    </div>
-  </section><!-- End Hero -->
-  <main id="main">
-    <!-- ======= About Section ======= -->
+    </section>
+    <!-- About Section -->
     <section id="about" class="about">
       <div class="container">
         <div class="section-title">
-          <h2>About</h2>
-          <p>
-            I love to turn good ideas into reality with technology to build something useful for this world.<br />
-            12 years of experience in software development full-stack development with Microsoft Technology stack, UI
-            Framework, Coding, Code-review, POCs, Database & Application Design.
-          </p>
+          <h2>About Me</h2>
+          <p>Passionate about creating innovative solutions that make a difference</p>
         </div>
-        <div class="row">
-          <div class="col-lg-4" data-aos="fade-right">
-            <img src="assets/img/Me.jpg" class="img-fluid" alt="">
+        <div class="about-content animate-on-scroll">
+          <div class="about-info">
+            <p class="about-text">
+              With 12+ years of experience in software development, I specialize in building robust and scalable
+              solutions using modern technologies.
+              My expertise spans across full-stack development, cloud architecture, and software design.
+            </p>
+            <p class="about-text">
+              I'm passionate about creating efficient, maintainable code and sharing knowledge with the developer
+              community through my YouTube channel and technical blog posts.
+            </p>
+            <div class="about-details">
+              <div class="detail-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>New Delhi, India</span>
+              </div>
+              <div class="detail-item">
+                <i class="fas fa-graduation-cap"></i>
+                <span>Master in Computer Applications</span>
+              </div>
+              <div class="detail-item">
+                <i class="fas fa-language"></i>
+                <span>English, Hindi</span>
+              </div>
+            </div>
           </div>
-          <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-            <h3>fullstack developer</h3>
-            <div class="row">
-              <div class="col-lg-12">
-                <ul>
-                  <li><i class="icofont-rounded-right"></i> OOAD, HLD, LLD, UML Desiging, Tech Spec documents </li>
-                  <li><i class="icofont-rounded-right"></i> Design Principles, Design Patterns, OOPs Concepts </li>
-                  <li><i class="icofont-rounded-right"></i> Microsoft Azure, Azure DevOps, VS Code, Visual Studio, Dot
-                    Net Framework </li>
-                  <li><i class="icofont-rounded-right"></i> C#, JavaScript, Angular, MVC, SQL, NoSQL, Web/OData/GraphQL
-                    APIs, Entity Framework </li>
-                  <li><i class="icofont-rounded-right"></i> RESTFul, Layered, Web-Queue-Worker, Client-Server, 3 / N
-                    tier, DDD </li>
-                </ul>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-lg-4">
-                <ul>
-                  <li><i class="icofont-rounded-right"></i> <strong>Birthday:</strong> 13 Aug</li>
-                  <li><i class="icofont-rounded-right"></i> <strong>City:</strong> New Delhi, India</li>
-                </ul>
-              </div>
-              <div class="col-lg-8">
-                <ul>
-                  <li><i class="icofont-rounded-right"></i> <strong>Degree:</strong> Master in Computer Applications</li>
-                  <li><i class="icofont-rounded-right"></i> <strong>Language</strong> Hindi, English </li>
-                </ul>
-              </div>
-            </div>
+          <div class="about-image">
+            <img src="assets/img/Me.jpg" alt="Manish Kumar working" class="about-img">
+          </div>
+        </div>
+        <div class="stats-grid">
+          <div class="stat-card animate-on-scroll">
+            <div class="stat-number">12+</div>
+            <div class="stat-label">Years Experience</div>
+          </div>
+          <div class="stat-card animate-on-scroll">
+            <div class="stat-number">50+</div>
+            <div class="stat-label">Projects Completed</div>
+          </div>
+          <div class="stat-card animate-on-scroll">
+            <div class="stat-number">100+</div>
+            <div class="stat-label">Happy Clients</div>
+          </div>
+          <div class="stat-card animate-on-scroll">
+            <div class="stat-number">1K+</div>
+            <div class="stat-label">YouTube Subscribers</div>
           </div>
         </div>
       </div>
-    </section><!-- End About Section -->
-
-    <!-- ======= Skills Section ======= -->
-    <section id="skills" class="skills section-bg">
+    </section>
+    <!-- Services Section -->
+    <section id="services" class="services">
       <div class="container">
         <div class="section-title">
-          <h2>Skills</h2>
-          <p>Being as a full stack developoer my daily dealings are with</p>
+          <h2>Services</h2>
+          <p>Comprehensive solutions for your digital needs</p>
         </div>
-        <div class="row">
-          <div class="col-lg-4">
-            <ul style="list-style-type: square;">
-              <li><strong>UI: </strong>Angular, JavaScript, jQuery</li>
-              <li><strong>Cloud: </strong>Azure PaaS, Azure DevOps</li>
-              <li><strong>Practices: </strong>SOLID, DRY, Patterns</li>
-              <li><strong>OOAD: </strong>HLD, LLD, UML</li>
-            </ul>
+        <div class="services-grid">
+          <div class="service-card animate-on-scroll">
+            <i class="fas fa-code"></i>
+            <h3>Full Stack Development</h3>
+            <p>End-to-end development using .NET, Angular, React, and modern web technologies. Building scalable and
+              maintainable applications.</p>
+            <a href="#contact" class="learn-more">
+              Learn more <i class="fas fa-arrow-right"></i>
+            </a>
           </div>
-          <div class="col-lg-4">
-            <ul style="list-style-type: square;">
-              <li><strong>Back End: </strong>C#, MVC, Autofac</li>
-              <li><strong>Services: </strong>REST, OData, GraphQL</li>
-              <li><strong>ORM: </strong>Entity Framework</li>
-              <li><strong>SDLC: </strong>Agile, Waterfall, Prototype</li>
-            </ul>
+          <div class="service-card animate-on-scroll">
+            <i class="fas fa-cloud"></i>
+            <h3>Cloud Solutions</h3>
+            <p>Azure cloud architecture, deployment, and DevOps implementation. Optimize your infrastructure for
+              performance and cost.</p>
+            <a href="#contact" class="learn-more">
+              Learn more <i class="fas fa-arrow-right"></i>
+            </a>
           </div>
-          <div class="col-lg-4">
-            <ul style="list-style-type: square;">
-              <li><strong>Tools: </strong>Visual Studio, VS Code, Visio</li>
-              <li><strong>Source Control: </strong>GIT, VSTS</li>
-              <li><strong>Database: </strong>SQL SERVER</li>
-              <li><strong>Unit Testing: </strong>MS Test, Nunit</li>
-            </ul>
+          <div class="service-card animate-on-scroll">
+            <i class="fas fa-database"></i>
+            <h3>Database Design</h3>
+            <p>Efficient database architecture and optimization for SQL Server and NoSQL. Design scalable data
+              solutions.</p>
+            <a href="#contact" class="learn-more">
+              Learn more <i class="fas fa-arrow-right"></i>
+            </a>
           </div>
-        </div>
-        <div class="row skills-content">
-          <div class="col-lg-4" data-aos="fade-up">
-            <div class="progress">
-              <span class="skill">C# | MVC | JavaScript | Angular | jQuery<i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-                </div>
-              </div>
-            </div>
-            <div class="progress">
-              <span class="skill"> REST | OData | WCF | XML Web Services <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-                </div>
-              </div>
-            </div>
-            <div class="progress">
-              <span class="skill">SOLID | C# | Angular | Web API | SQL | Azure <i class="val">85%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
-                </div>
-              </div>
-            </div>
-            <div class="progress">
-              <span class="skill">Microservices | Docker <i class="val">40%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4" data-aos="fade-up">
-            <div class="progress">
-              <span class="skill">OOP | Design Principles | Design Patterns<i class="val">75%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                </div>
-              </div>
-            </div>
-            <div class="progress">
-              <span class="skill">Azure PASS | Azure DevOps | Agile | GIT | VSTS<i class="val">70%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
-                </div>
-              </div>
-            </div>
-            <div class="progress">
-              <span class="skill">SQL Server | Entity Framework <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="progress">
-              <span class="skill">OOAD | UML | HLD | LLD | Visio <i class="val">65%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
-                </div>
-              </div>
-            </div>
-            <div class="progress">
-              <span class="skill"> DRY | Unit Testing | Mocking <i class="val">60%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
-                </div>
-              </div>
-            </div>
-            <div class="progress">
-              <span class="skill"> GraphQL | NoSQL | MSAL | DS <i class="val">50%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-                </div>
-              </div>
-            </div>
+          <div class="service-card animate-on-scroll">
+            <i class="fas fa-laptop-code"></i>
+            <h3>Technical Consultation</h3>
+            <p>Expert advice on architecture, technology selection, and best practices. Guide your team to success.</p>
+            <a href="#contact" class="learn-more">
+              Learn more <i class="fas fa-arrow-right"></i>
+            </a>
           </div>
         </div>
       </div>
-    </section><!-- End Skills Section -->
-  </main><!-- End #main -->
+    </section>
+    <!-- YouTube & Social Media Section -->
+    <section id="youtube" class="youtube-section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Featured Content</h2>
+          <p>Latest videos and social media updates</p>
+        </div>
 
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="container">
-      <div class="credits">
-        Developed by <a href="https://www.linkedin.com/in/manish-kumar-7b962028">Manish Kumar</a>
+        <!-- Social Media Platform Cards -->
+        <div class="social-grid">
+          <div class="social-card animate-on-scroll">
+            <i class="fab fa-youtube"></i>
+            <h3>YouTube Channel</h3>
+            <p>Technical tutorials, coding tips, and best practices</p>
+            <div class="stats">
+              <!-- <div class="stat">
+                <div class="stat-value">1K+</div>
+                <div class="stat-label">Subscribers</div>
+              </div>
+              <div class="stat">
+                <div class="stat-value">50+</div>
+                <div class="stat-label">Videos</div>
+              </div> -->
+            </div>
+            <a href="https://youtube.com/@YourChannel" target="_blank" rel="noopener" class="follow-btn">
+              <i class="fab fa-youtube"></i> Subscribe
+            </a>
+          </div>
+
+          <div class="social-card animate-on-scroll">
+            <i class="fab fa-linkedin"></i>
+            <h3>LinkedIn</h3>
+            <p>Professional updates and industry insights</p>
+            <div class="stats">
+              <!-- <div class="stat">
+                <div class="stat-value">500+</div>
+                <div class="stat-label">Connections</div>
+              </div>
+              <div class="stat">
+                <div class="stat-value">100+</div>
+                <div class="stat-label">Posts</div>
+              </div> -->
+            </div>
+            <a href="https://www.linkedin.com/in/manish-kumar-7b962028" target="_blank" rel="noopener"
+              class="follow-btn">
+              <i class="fab fa-linkedin"></i> Connect
+            </a>
+          </div>
+
+          <div class="social-card animate-on-scroll">
+            <i class="fab fa-github"></i>
+            <h3>GitHub</h3>
+            <p>Open source contributions and personal projects</p>
+            <div class="stats">
+              <!-- <div class="stat">
+                <div class="stat-value">20+</div>
+                <div class="stat-label">Repositories</div>
+              </div>
+              <div class="stat">
+                <div class="stat-value">100+</div>
+                <div class="stat-label">Contributions</div>
+              </div> -->
+            </div>
+            <a href="https://github.com/dowhilecode" target="_blank" rel="noopener" class="follow-btn">
+              <i class="fab fa-github"></i> Follow
+            </a>
+          </div>
+        </div>
+
+        <!-- Featured YouTube Videos -->
+        <!-- <div class="section-title" style="margin-top: 4rem;">
+          <h3>Latest Videos</h3>
+          <p>Watch my latest technical tutorials and tips</p>
+        </div>
+        <div class="youtube-grid">
+        </div> -->
       </div>
-    </div>
-  </footer><!-- End  Footer -->
+    </section>
 
-  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-info">
+            <a href="#" class="footer-logo">MK</a>
+            <p class="footer-desc">Building innovative solutions and sharing knowledge with the developer community.</p>
+          </div>
+          <div class="footer-bottom">
+            <p>&copy; 2025 Manish Kumar. All rights reserved.</p>
+            <p class="footer-credit">Designed with <i class="fas fa-heart"></i> by Manish Kumar</p>
+          </div>
+        </div>
+      </div>
+    </footer>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/jquery/jquery.min.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
-  <script src="assets/vendor/counterup/counterup.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/venobox/venobox.min.js"></script>
-  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
-  <script src="assets/vendor/typed.js/typed.min.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
+    <!-- Back to top button -->
+    <button class="back-to-top" aria-label="Back to top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
 
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="assets/js/modern-main.js"></script>
 
-</body>
+  </body>
 
 </html>
