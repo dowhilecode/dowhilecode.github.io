@@ -166,6 +166,53 @@ const initSmoothScrolling = () => {
     });
 };
 
+// Enhanced Skills Animation
+const initSkillsAnimation = () => {
+    const skills = document.querySelectorAll('.skill-brick');
+    const highlightCount = 2; // Number of skills to highlight at once
+    let lastHighlighted = new Set(); // Keep track of previously highlighted skills
+    
+    const randomHighlight = () => {
+        // Remove highlights from previously highlighted skills
+        lastHighlighted.forEach(index => {
+            skills[index]?.classList.remove('highlight');
+        });
+        lastHighlighted.clear();
+        
+        // Create array of available indices (excluding previously highlighted)
+        const availableIndices = Array.from({ length: skills.length }, (_, i) => i);
+        
+        // Select two random skills
+        for (let i = 0; i < highlightCount; i++) {
+            if (availableIndices.length === 0) break;
+            
+            const randomIndex = Math.floor(Math.random() * availableIndices.length);
+            const selectedIndex = availableIndices[randomIndex];
+            
+            // Add highlight and store index
+            skills[selectedIndex]?.classList.add('highlight');
+            lastHighlighted.add(selectedIndex);
+            
+            // Remove selected index from available pool
+            availableIndices.splice(randomIndex, 1);
+        }
+    };
+
+    // Initial highlight with delay
+    setTimeout(randomHighlight, 1000);
+    
+    // Change highlights randomly between 1.5 and 2.5 seconds
+    const animate = () => {
+        const randomDelay = 1500 + Math.random() * 1000; // Random delay between 1.5s and 2.5s
+        setTimeout(() => {
+            randomHighlight();
+            animate(); // Schedule next animation
+        }, randomDelay);
+    };
+    
+    animate();
+};
+
 // Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     initTheme();
@@ -174,6 +221,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initBackToTop();
     initTypingAnimation();
     initSmoothScrolling();
+    initSkillsAnimation();
     
     // Event Listeners
     document.querySelector('.theme-toggle')?.addEventListener('click', toggleTheme);

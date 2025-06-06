@@ -278,14 +278,14 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-bottom: 1rem;
+  margin-bottom: 0rem;
   animation: slideUp 1s ease-out;
 }
 
 .hero-subtitle {
   font-size: 1.5rem;
   color: var(--green-color);
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
   animation: slideUp 1s ease-out 0.2s backwards;
 }
 
@@ -2044,5 +2044,288 @@ h1, h2, h3, h4, h5, h6 {
         -webkit-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent;
+    }
+}
+
+/* Company Grid Styles */
+.companies-section {
+    padding: var(--section-spacing) 2rem;
+    background: var(--bg-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.companies-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, 
+        rgba(var(--primary-color-rgb), 0.05),
+        rgba(76, 175, 80, 0.05)
+    );
+    animation: gradientFlow 15s ease infinite;
+    background-size: 400% 400%;
+}
+
+.company-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.company-card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 6px var(--card-shadow);
+    transition: all 0.3s var(--animation-timing);
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideUp 0.6s var(--animation-timing) forwards;
+}
+
+.company-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 0;
+}
+
+.company-card:hover {
+    transform: translateY(-10px);
+}
+
+.company-card:hover::before {
+    opacity: 0.1;
+}
+
+.company-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.company-card:hover .company-icon {
+    transform: scale(1.1) rotate(-5deg);
+}
+
+.company-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--heading-color);
+    position: relative;
+    z-index: 1;
+}
+
+.company-role {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    opacity: 0.8;
+    position: relative;
+    z-index: 1;
+}
+
+/* Company-specific colors */
+.company-icon.sp-global {
+    color: #fff;
+    background: linear-gradient(135deg, #f20606, #850a95);
+}
+
+.company-icon.natwest {
+    color: #fff;
+    background: linear-gradient(135deg, #850a95, #65c2e3);
+}
+
+.company-icon.concentrix {
+    color: #fff;
+    background: linear-gradient(135deg, #65c2e3, #3DA8FF);
+}
+
+.company-icon.micromax {
+    color: #fff;
+    background: linear-gradient(135deg, #FF6B00, #FF4D7D);
+}
+
+.company-icon.vinculum {
+    color: #fff;
+    background: linear-gradient(135deg, #00A0DC, #0077b5);
+}
+
+.company-icon.rave {
+    color: #fff;
+    background: linear-gradient(135deg, #005985, #00A0DC);
+}
+
+.company-icon.dialnet {
+    color: #fff;
+    background: linear-gradient(135deg, #3c70b0, #65c2e3);
+}
+
+/* Staggered animation for company cards */
+.company-card:nth-child(1) { animation-delay: 0.1s; }
+.company-card:nth-child(2) { animation-delay: 0.2s; }
+.company-card:nth-child(3) { animation-delay: 0.3s; }
+.company-card:nth-child(4) { animation-delay: 0.4s; }
+.company-card:nth-child(5) { animation-delay: 0.5s; }
+.company-card:nth-child(6) { animation-delay: 0.6s; }
+.company-card:nth-child(7) { animation-delay: 0.7s; }
+
+/* Skills Brick Layout */
+.skills-brick-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1rem;
+    padding: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.skill-brick {
+    background: var(--card-bg);
+    padding: 1.25rem 1rem;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s var(--animation-timing);
+    cursor: pointer;
+    border: 1px solid rgba(var(--primary-color-rgb), 0.1);
+}
+
+.skill-brick::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, 
+        rgba(var(--primary-color-rgb), 0.1),
+        rgba(var(--primary-color-rgb), 0.05)
+    );
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.skill-brick:hover {
+    transform: translateY(-5px);
+    border-color: rgba(var(--primary-color-rgb), 0.3);
+}
+
+.skill-brick:hover::before {
+    opacity: 1;
+}
+
+.skill-brick i {
+    font-size: 1.75rem;
+    color: var(--primary-color);
+    transition: transform 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.skill-brick span {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-color);
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.skill-brick.highlight {
+    animation: skillPulse 2s infinite;
+}
+
+.skill-brick.highlight-alternate25 {
+    animation: skillPulse 2.5s infinite;
+}
+
+.skill-brick.highlight-alternate3 {
+    animation: skillPulse 3s infinite;
+}
+
+@keyframes skillPulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(var(--primary-color-rgb), 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(var(--primary-color-rgb), 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(var(--primary-color-rgb), 0);
+    }
+}
+
+/* Skill brick hover effects */
+.skill-brick:hover i {
+    transform: scale(1.2) rotate(5deg);
+}
+
+/* Skill-specific gradients */
+.skill-brick[data-skill="react"] i { color: #61dafb; }
+.skill-brick[data-skill="javascript"] i { color: #f7df1e; }
+.skill-brick[data-skill="typescript"] i { color: #007acc; }
+.skill-brick[data-skill="dotnet"] i { color: #512bd4; }
+.skill-brick[data-skill="azure"] i { color: #0089d6; }
+.skill-brick[data-skill="llm"] i { color: #ff4d4d; }
+.skill-brick[data-skill="csharp"] i { color: #9b4f96; }
+.skill-brick[data-skill="database"] i { color: #00758f; }
+.skill-brick[data-skill="devops"] i { color: #0078d7; }
+.skill-brick[data-skill="docker"] i { color: #2496ed; }
+
+/* Dark mode adjustments */
+[data-theme="dark"] .skill-brick {
+    background: var(--card-bg);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .skill-brick:hover {
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .skills-brick-container {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 0.75rem;
+        padding: 1rem;
+    }
+    
+    .skill-brick {
+        padding: 1rem 0.75rem;
+    }
+    
+    .skill-brick i {
+        font-size: 1.5rem;
+    }
+    
+    .skill-brick span {
+        font-size: 0.8rem;
     }
 }
