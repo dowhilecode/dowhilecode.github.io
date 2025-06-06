@@ -578,6 +578,63 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 8px 12px var(--card-shadow);
 }
 
+/* YouTube Grid and Video Styles */
+.youtube-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+}
+
+.video-container,
+.playlist-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    background: var(--card-bg);
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 6px var(--card-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-container:hover,
+.playlist-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px var(--card-shadow);
+}
+
+.video-container iframe,
+.playlist-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Responsive adjustments for videos */
+@media (max-width: 992px) {
+    .youtube-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .youtube-grid {
+        gap: 1rem;
+    }
+    
+    .video-container,
+    .playlist-container {
+        margin-bottom: 1rem;
+    }
+}
+
 /* Social Links */
 .social-links {
   display: flex;
