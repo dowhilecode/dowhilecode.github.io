@@ -1557,3 +1557,157 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
     color: var(--text-color);
 }
+
+/* Company Logos Showcase */
+.companies-scroll {
+    background: var(--card-bg);
+    margin: 2rem 0;
+    padding: 1.5rem 0;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px var(--card-shadow);
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.companies-scroll::before,
+.companies-scroll::after {
+    content: "";
+    height: 100%;
+    position: absolute;
+    width: 100px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.companies-scroll::before {
+    left: 0;
+    background: linear-gradient(to right, var(--card-bg), transparent);
+}
+
+.companies-scroll::after {
+    right: 0;
+    background: linear-gradient(to left, var(--card-bg), transparent);
+}
+
+.logos-slide {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    animation: scroll 30s linear infinite;
+    padding: 0 2rem;
+}
+
+.logos-slide img {
+    height: 2.5rem;
+    max-width: 150px;
+    object-fit: contain;
+    filter: grayscale(100%) opacity(0.7);
+    transition: all 0.3s var(--animation-timing);
+}
+
+.logos-slide img:hover {
+    filter: grayscale(0%) opacity(1);
+    transform: scale(1.1);
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-100% - 3rem));
+    }
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .companies-scroll {
+        padding: 1rem 0;
+    }
+    
+    .logos-slide {
+        gap: 2rem;
+    }
+    
+    .logos-slide img {
+        height: 2rem;
+        max-width: 120px;
+    }
+}
+
+/* Company Logos Styles */
+.companies-scroll {
+  margin: 2rem 0;
+  overflow: hidden;
+}
+
+.logos-slide {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  animation: slide 20s linear infinite;
+}
+
+.company-name {
+  font-weight: 600;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: transform 0.3s ease;
+  white-space: nowrap;
+  margin: 0 1rem;
+}
+
+.company-name:hover {
+  transform: scale(1.1);
+}
+
+/* Company-specific colors */
+.sp-global {
+  color: #0033A0;
+  background: rgba(0, 51, 160, 0.1);
+}
+
+.natwest {
+  color: #36003D;
+  background: rgba(54, 0, 61, 0.1);
+}
+
+.concentrix {
+  color: #003DA5;
+  background: rgba(0, 61, 165, 0.1);
+}
+
+.micromax {
+  color: #E31837;
+  background: rgba(227, 24, 55, 0.1);
+}
+
+.vinculum {
+  color: #00A0DC;
+  background: rgba(0, 160, 220, 0.1);
+}
+
+.rave {
+  color: #FF6B00;
+  background: rgba(255, 107, 0, 0.1);
+}
+
+.dialnet {
+  color: #2C5282;
+  background: rgba(44, 82, 130, 0.1);
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

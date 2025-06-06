@@ -2,9 +2,8 @@
 
 // Theme Management
 const initTheme = () => {
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     const savedTheme = localStorage.getItem('theme');
-    const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+    const theme = savedTheme || 'light';  // Default to light theme
     document.documentElement.setAttribute('data-theme', theme);
     updateThemeIcon(theme);
 };
