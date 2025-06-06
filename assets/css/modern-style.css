@@ -1,34 +1,71 @@
 :root {
-  --primary-color: #2563eb;
-  --primary-color-rgb: 37, 99, 235;
-  --secondary-color: #3b82f6;
+  /* Main colors */
+  --red-color: #FF3366;
+  --blue-color: #2196F3;
+  --green-color: #4CAF50;
+  --yellow-color: #FFB800;
+  
+  /* Color usage */
+  --primary-color: var(--blue-color);
+  --primary-color-rgb: 33, 150, 243;
+  --secondary-color: var(--green-color);
+  --accent-color: var(--red-color);
+  --highlight-color: var(--yellow-color);
+  
+  /* UI Colors */
   --bg-color: #ffffff;
   --text-color: #1f2937;
   --heading-color: #111827;
   --border-color: #e5e7eb;
-  --hover-color: #60a5fa;
+  --hover-color: #0284c7;
   --card-bg: #f9fafb;
+  
+  /* Gradients */
+  --gradient-start: var(--blue-color);
+  --gradient-end: var(--green-color);
+  --accent-gradient-start: var(--red-color);
+  --accent-gradient-end: var(--yellow-color);
+  
+  /* Other */
   --section-spacing: 6rem;
   --animation-timing: cubic-bezier(0.4, 0, 0.2, 1);
-  --gradient-start: #2563eb;
-  --gradient-end: #4f46e5;
   --card-shadow: rgba(0, 0, 0, 0.1);
   --hero-overlay: rgba(255, 255, 255, 0.9);
 }
 
 [data-theme="dark"] {
-  --primary-color: #38bdf8;
-  --secondary-color: #0ea5e9;
-  --bg-color: #0f172a;
-  --text-color: #e2e8f0;
-  --heading-color: #f8fafc;
-  --border-color: #1e293b;
-  --hover-color: #0284c7;
-  --card-bg: #1e293b;
-  --gradient-start: #38bdf8;
-  --gradient-end: #2563eb;
-  --card-shadow: rgba(0, 0, 0, 0.25);
-  --hero-overlay: rgba(15, 23, 42, 0.9);
+  /* Main colors - slightly adjusted for dark mode */
+  --red-color: #FF4D7D;
+  --blue-color: #3DA8FF;
+  --green-color: #69F0AE;
+  --yellow-color: #FFD740;
+  
+  /* Color usage */
+  --primary-color: var(--blue-color);
+  --primary-color-rgb: 61, 168, 255;
+  --secondary-color: var(--green-color);
+  --accent-color: var(--red-color);
+  --highlight-color: var(--yellow-color);
+  
+  /* UI Colors */
+  --bg-color: #0A1929;
+  --text-color: #E2E8F0;
+  --heading-color: #F8FAFC;
+  --border-color: #1E293B;
+  --hover-color: var(--blue-color);
+  --card-bg: #132F4C;
+  
+  /* Gradients */
+  --gradient-start: var(--blue-color);
+  --gradient-end: var(--green-color);
+  --accent-gradient-start: var(--red-color);
+  --accent-gradient-end: var(--yellow-color);
+  
+  /* Dark mode specific */
+  --card-shadow: rgba(0, 0, 0, 0.4);
+  --hero-overlay: rgba(10, 25, 41, 0.9);
+  --dark-card-hover: #1A3B5F;
+  --dark-section-bg: #0F2132;
 }
 
 /* General Styles */
@@ -120,6 +157,19 @@ h1, h2, h3, h4, h5, h6 {
 
 .logo:hover {
   transform: scale(1.05);
+}
+
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.header-yt-logo {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 .nav-links {
@@ -224,7 +274,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero-title {
   font-size: 3.5rem;
-  background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+  background: linear-gradient(135deg, var(--blue-color), var(--green-color));
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -234,7 +284,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero-subtitle {
   font-size: 1.5rem;
-  color: var(--text-color);
+  color: var(--green-color);
   margin-bottom: 1.5rem;
   animation: slideUp 1s ease-out 0.2s backwards;
 }
@@ -350,7 +400,7 @@ h1, h2, h3, h4, h5, h6 {
 .featured-card h3 {
   font-size: 1.2rem;
   margin-bottom: 1rem;
-  color: var(--heading-color);
+  color: var(--blue-color);
 }
 
 .card-header {
@@ -445,9 +495,13 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at 50% 50%, var(--gradient-start) 0%, transparent 70%);
-  opacity: 0.05;
-  z-index: 0;
+  background: linear-gradient(135deg, 
+    rgba(33, 150, 243, 0.05),
+    rgba(76, 175, 80, 0.05),
+    rgba(255, 51, 102, 0.05),
+    rgba(255, 184, 0, 0.05)
+  );
+  animation: gradientFlow 15s ease infinite;
 }
 
 .services-grid {
@@ -523,7 +577,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .service-card .learn-more {
-  color: var(--primary-color);
+  color: var(--green-color);
   text-decoration: none;
   font-weight: 500;
   display: flex;
@@ -533,6 +587,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .service-card:hover .learn-more {
+  color: var(--red-color);
   gap: 1rem;
 }
 
@@ -597,12 +652,12 @@ h1, h2, h3, h4, h5, h6 {
     overflow: hidden;
     box-shadow: 0 4px 6px var(--card-shadow);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 4px solid var(--accent-color);
 }
 
 .video-container:hover,
 .playlist-container:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 15px var(--card-shadow);
+    border-color: var(--highlight-color);
 }
 
 .video-container iframe,
@@ -869,7 +924,7 @@ h1, h2, h3, h4, h5, h6 {
 .detail-item i {
   font-size: 1.5rem;
   color: var(--primary-color);
-  background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+  background: linear-gradient(135deg, var(--blue-color), var(--green-color));
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -917,7 +972,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
-  background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+  background: linear-gradient(135deg, var(--red-color), var(--yellow-color));
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1081,7 +1136,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'DM Sans', sans-serif;
     margin-bottom: 1.5rem;
     text-decoration: none;
-    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    background: linear-gradient(135deg, var(--blue-color), var(--green-color));
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -1297,7 +1352,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .skills-category-title {
   font-size: 0.9rem;
-  color: var(--primary-color);
+  color: var(--blue-color);
   margin-bottom: 0.75rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -1324,14 +1379,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .skill-item:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  background-color: var(--hover-bg);
+  background: linear-gradient(135deg, var(--blue-color), var(--green-color));
+  color: white;
+}
+
+.skill-item:hover i,
+.skill-item:hover span {
+  color: white;
 }
 
 .skill-item i {
   font-size: 1.125rem;
-  color: var(--primary-color);
+  color: var(--green-color);
 }
 
 .skill-item span {
@@ -1611,7 +1670,7 @@ h1, h2, h3, h4, h5, h6 {
 .youtube-header .channel-title {
     font-size: 1.1rem;
     font-weight: 600;
-    color: var(--text-color);
+    color: var(--blue-color);
 }
 
 /* Company Logos Showcase */
@@ -1766,4 +1825,224 @@ h1, h2, h3, h4, h5, h6 {
   100% {
     transform: translateX(-100%);
   }
+}
+
+/* Dark Mode Enhancements */
+[data-theme="dark"] {
+    /* Card Enhancements */
+    .featured-card,
+    .service-card,
+    .social-card,
+    .stat-card,
+    .detail-item {
+        background: var(--card-bg);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .featured-card:hover,
+    .service-card:hover,
+    .social-card:hover,
+    .stat-card:hover,
+    .detail-item:hover {
+        background: var(--dark-card-hover);
+        transform: translateY(-5px);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Section Backgrounds */
+    .services,
+    .about,
+    .youtube-section {
+        background: var(--dark-section-bg);
+    }
+
+    /* Skill Items */
+    .skill-item {
+        background: var(--card-bg);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .skill-item:hover {
+        background: linear-gradient(135deg, 
+            rgba(var(--primary-color-rgb), 0.2),
+            rgba(var(--secondary-color-rgb), 0.2)
+        );
+        border-color: var(--primary-color);
+    }
+
+    /* Video Containers */
+    .video-container,
+    .playlist-container {
+        background: var(--card-bg);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }    /* Navigation */
+    .header {
+        background: rgba(10, 25, 41, 0.8);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    /* Companies Scroll */
+    .companies-scroll {
+        background: var(--card-bg);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .company-name {
+        background: rgba(255, 255, 255, 0.05);
+    }
+
+    /* Enhanced Gradients for Dark Mode */
+    .hero::before {
+        background: linear-gradient(135deg,
+            rgba(61, 168, 255, 0.1),
+            rgba(105, 240, 174, 0.1),
+            rgba(255, 77, 125, 0.1),
+            rgba(255, 215, 64, 0.1)
+        );
+    }
+
+    .services::before {
+        opacity: 0.15;
+    }
+
+    /* Social Links */
+    .social-card .follow-btn {
+        background: linear-gradient(135deg, var(--accent-gradient-start), var(--accent-gradient-end));
+        border: none;
+        color: #fff;
+    }
+
+    .social-card .follow-btn:hover {
+        opacity: 0.9;
+        transform: translateY(-2px);
+    }
+
+    /* Stats Enhancement */
+    .stat-number {
+        background: linear-gradient(135deg, var(--red-color), var(--yellow-color));
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    /* Footer Enhancement */
+    .footer {
+        background: var(--dark-section-bg);
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    /* Back to Top Button */
+    .back-to-top {
+        background: linear-gradient(135deg, var(--accent-gradient-start), var(--accent-gradient-end));
+        box-shadow: 0 4px 15px rgba(255, 77, 125, 0.3);
+    }
+
+    /* Text Color Enhancements */
+    .hero-title {
+        background: linear-gradient(135deg, var(--blue-color), var(--green-color));
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .hero-subtitle {
+        color: var(--green-color);
+    }
+
+    .typed-text {
+        color: var(--red-color);
+    }
+
+    .section-title h2 {
+        background: linear-gradient(135deg, var(--blue-color), var(--green-color));
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .section-title p {
+        color: var(--green-color);
+    }
+
+    .skills-category-title {
+        color: var(--blue-color);
+        border-bottom-color: var(--blue-color);
+    }
+
+    .skill-item i {
+        color: var(--green-color);
+    }
+
+    .skill-item:hover {
+        background: linear-gradient(135deg, var(--blue-color), var(--green-color));
+    }
+
+    .skill-item:hover i,
+    .skill-item:hover span {
+        color: white;
+    }
+
+    .service-card h3 {
+        color: var(--blue-color);
+    }
+
+    .service-card .learn-more {
+        color: var(--green-color);
+    }
+
+    .service-card:hover .learn-more {
+        color: var(--red-color);
+    }
+
+    .stat-number {
+        background: linear-gradient(135deg, var(--red-color), var(--yellow-color));
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .about-text strong {
+        color: var(--blue-color);
+    }
+
+    .detail-item i {
+        background: linear-gradient(135deg, var(--blue-color), var(--green-color));
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .profile-link i {
+        color: var(--blue-color);
+    }
+
+    .profile-link:hover i {
+        background: linear-gradient(135deg, var(--red-color), var(--yellow-color));
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .profile-link:hover .link-label {
+        color: var(--blue-color);
+    }
+
+    .youtube-featured .featured-icon i {
+        color: var(--red-color);
+    }
+
+    .channel-title {
+        color: var(--blue-color);
+    }
+
+    .footer-logo {
+        background: linear-gradient(135deg, var(--blue-color), var(--green-color));
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
 }
