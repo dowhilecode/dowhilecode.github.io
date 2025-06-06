@@ -27,12 +27,37 @@ const updateThemeIcon = (theme) => {
 const initMobileMenu = () => {
     const menuButton = document.querySelector('.mobile-menu-toggle');
     const nav = document.querySelector('.nav-links');
-
+    const navLinks = document.querySelectorAll('.nav-links a');
+    
+    // Toggle menu on button click
     menuButton?.addEventListener('click', () => {
         nav.classList.toggle('active');
         menuButton.setAttribute('aria-expanded', 
             menuButton.getAttribute('aria-expanded') === 'false' ? 'true' : 'false'
         );
+        
+        // Toggle menu icon
+        const menuIcon = menuButton.querySelector('i');
+        menuIcon.classList.toggle('fa-bars');
+        menuIcon.classList.toggle('fa-times');
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!nav.contains(e.target) && !menuButton.contains(e.target) && nav.classList.contains('active')) {
+            nav.classList.remove('active');
+            menuButton.setAttribute('aria-expanded', 'false');
+            menuButton.querySelector('i').classList.replace('fa-times', 'fa-bars');
+        }
+    });
+
+    // Close menu when clicking on a nav link
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            nav.classList.remove('active');
+            menuButton.setAttribute('aria-expanded', 'false');
+            menuButton.querySelector('i').classList.replace('fa-times', 'fa-bars');
+        });
     });
 };
 
