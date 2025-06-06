@@ -83,10 +83,11 @@ const initBackToTop = () => {
 const initTypingAnimation = () => {
     const options = {
         strings: [
-            'Software Architect',
-            'Full Stack Developer',
-            'Cloud Solutions Expert',
-            'Technical Consultant'
+            'Technical Lead',
+            'Full Stack Engineer',
+            'Technical Consultant',
+            'Loves Coding',
+            'Open Source Contributor',
         ],
         typeSpeed: 50,
         backSpeed: 30,
@@ -96,7 +97,7 @@ const initTypingAnimation = () => {
         fadeOut: true,
         fadeOutClass: 'typed-fade-out',
         fadeOutDelay: 500,
-        cursorChar: '|',
+        cursorChar: '',
         autoInsertCss: true,
         showCursor: true
     };
