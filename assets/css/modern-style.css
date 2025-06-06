@@ -1668,22 +1668,22 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Company-specific colors */
 .sp-global {
-  color: #0033A0;
+  color: #f20606;
   background: rgba(0, 51, 160, 0.1);
 }
 
 .natwest {
-  color: #36003D;
+  color: #850a95;
   background: rgba(54, 0, 61, 0.1);
 }
 
 .concentrix {
-  color: #003DA5;
+  color: #65c2e3;
   background: rgba(0, 61, 165, 0.1);
 }
 
 .micromax {
-  color: #E31837;
+  color: #FF6B00;
   background: rgba(227, 24, 55, 0.1);
 }
 
@@ -1693,12 +1693,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .rave {
-  color: #FF6B00;
+  color: #005985;
   background: rgba(255, 107, 0, 0.1);
 }
 
 .dialnet {
-  color: #2C5282;
+  color: #3c70b0;
   background: rgba(44, 82, 130, 0.1);
 }
 

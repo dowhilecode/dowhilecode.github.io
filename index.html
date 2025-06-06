@@ -54,27 +54,28 @@
       <div class="hero-grid">
         <!-- Left Side: Profile Info -->
         <div class="hero-content animate-on-scroll">
-          <img src="assets/img/Me.jpg" alt="Manish Kumar" class="profile-img">           <h1 class="hero-title">Manish Kumar</h1>
+          <img src="assets/img/Me.jpg" alt="Manish Kumar" class="profile-img">
+          <h1 class="hero-title">Manish Kumar</h1>
           <p class="hero-subtitle">Transforming Ideas into Digital Reality</p>
-          <div id="typed-text" class="typed-text"></div>          
-          <div class="companies-scroll">            
+          <div id="typed-text" class="typed-text"></div>
+          <div class="companies-scroll">
             <div class="logos-slide">
               <span class="company-name sp-global">S&P Global</span>
-              <span class="company-name natwest">NatWest</span>
+              <span class="company-name natwest">NatWest (Royal Bank of Scotland)</span>
               <span class="company-name concentrix">Concentrix</span>
               <span class="company-name micromax">Micromax</span>
-              <span class="company-name vinculum">Vinculum</span>
+              <span class="company-name vinculum">Vinculum Solutions</span>
               <span class="company-name rave">Rave Infosys</span>
-              <span class="company-name dialnet">Dialnet</span>
+              <span class="company-name dialnet">Dialnet Communications</span>
             </div>
             <div class="logos-slide">
               <span class="company-name sp-global">S&P Global</span>
-              <span class="company-name natwest">NatWest</span>
+              <span class="company-name natwest">NatWest (Royal Bank of Scotland)</span>
               <span class="company-name concentrix">Concentrix</span>
               <span class="company-name micromax">Micromax</span>
-              <span class="company-name vinculum">Vinculum</span>
+              <span class="company-name vinculum">Vinculum Solutions</span>
               <span class="company-name rave">Rave Infosys</span>
-              <span class="company-name dialnet">Dialnet</span>
+              <span class="company-name dialnet">Dialnet Communications</span>
             </div>
           </div>
         </div> <!-- Right Side: Featured Content -->
@@ -106,38 +107,60 @@
                 </div>
               </div>
             </div>
-            <div class="featured-card youtube-featured"
-              onclick="window.open('https://www.youtube.com/channel/UCDb40BtvqBPinXo5S8mi-hQ', '_blank')">              <div class="card-header youtube-header">
+            <div class="featured-card youtube-featured">
+              <div class="card-header youtube-header">
                 <div class="logo-container">
-                  <img src="assets/img/yt-channel-logo-dowhilecode.png" alt="DoWhileCode Logo" class="yt-logo">
+                  <a href="https://www.youtube.com/channel/UCDb40BtvqBPinXo5S8mi-hQ" target="_blank" rel="noopener"
+                    class="profile-link">
+                    <img src="assets/img/yt-channel-logo-dowhilecode.png" alt="DoWhileCode Logo" class="yt-logo">
+                  </a>
                 </div>
                 <div class="youtube-info">
                   <div class="featured-icon">
-                    <i class="fab fa-youtube"></i>
+                    <a href="https://www.youtube.com/channel/UCDb40BtvqBPinXo5S8mi-hQ" target="_blank" rel="noopener"
+                      class="profile-link">
+                      <i class="fab fa-youtube"></i>
+                    </a>
                   </div>
-                  <span class="channel-title">DoWhileCode</span>
+                  <a href="https://www.youtube.com/channel/UCDb40BtvqBPinXo5S8mi-hQ" target="_blank" rel="noopener"
+                    class="profile-link">
+                    <span class="link-label">DoWhileCode</span>
+                  </a>
+
                 </div>
               </div>
             </div><!-- Adding Core Skills Section -->
             <div class="featured-card skills-featured">
-              <!-- <div class="skills-header">
+              <div class="skills-header">
                 <div class="skills-title">
-                  <div class="featured-icon">
+                  <!-- <div class="featured-icon">
                     <i class="fas fa-code"></i>
+                  </div> -->
+                  <!-- <h3 class="skills-heading">Core skills</h3> -->
+                  <div class="skill-item">
+                    <i class="fab fa-js"></i>
+                    <span>JavaScript</span>
                   </div>
-                  <h3 class="skills-heading">Core Skills</h3>
+                   <div class="skill-item">
+                    <i class="fab fa-code"></i>
+                    <span>.NET Core</span>
+                  </div>
+                  <div class="skill-item">
+                    <i class="fab fa-microsoft"></i>
+                    <span>Azure Cloud</span>
+                  </div>
+                  <div class="skill-item">
+                    <i class="fab fa-llm"></i>
+                    <span>Ollama</span>
+                  </div>
                 </div>
-              </div> -->
+              </div>
               <div class="skills-grid-container">
                 <div class="skills-column">
                   <h4 class="skills-category-title">Frontend</h4>
                   <div class="skill-item">
-                    <i class="fab fa-angular"></i>
-                    <span>Angular</span>
-                  </div>
-                  <div class="skill-item">
                     <i class="fab fa-react"></i>
-                    <span>React</span>
+                    <span>ReactJs</span>
                   </div>
                   <div class="skill-item">
                     <i class="fab fa-js"></i>
@@ -151,22 +174,18 @@
                 <div class="skills-column">
                   <h4 class="skills-category-title">Backend</h4>
                   <div class="skill-item">
-                    <i class="fab fa-microsoft"></i>
-                    <span>.NET Core</span>
-                  </div>
-                  <div class="skill-item">
                     <i class="fas fa-code"></i>
-                    <span>Web APIs</span>
+                    <span>C#, Web APIs</span>
                   </div>
                   <div class="skill-item">
                     <i class="fas fa-database"></i>
-                    <span>SQL Server</span>
+                    <span>SQL + No SQL</span>
                   </div>
                 </div>
                 <div class="skills-column">
                   <h4 class="skills-category-title">Cloud & DevOps</h4>
                   <div class="skill-item">
-                    <i class="fab fa-azure"></i>
+                    <i class="fab fa-microsoft"></i>
                     <span>Azure</span>
                   </div>
                   <div class="skill-item">
@@ -195,7 +214,8 @@
           <div class="about-info">
             <p class="about-text">
               With 13+ years of experience in software development, I specialize in building robust and scalable
-              solutions using modern technologies. My expertise spans across full-stack development, cloud architecture, and software design.
+              solutions using modern technologies. My expertise spans across full-stack development, cloud architecture,
+              and software design.
             </p>
             <p class="about-text">
               I'm passionate about creating efficient, maintainable code and sharing knowledge with the developer
